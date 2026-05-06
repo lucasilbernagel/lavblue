@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lavblue® Itaipuaçu — Lavanderia Self-Service 24h em Maricá</title>
+<meta name="description" content="Lavblue Itaipuaçu — Lavanderia self-service 24h com máquinas LG. Praticidade, economia e roupas impecáveis. Praça da 70 e Prof. Cardoso de Menezes." />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Lavblue® Itaipuaçu — Lavanderia Self-Service 24h" />
+<meta property="og:description" content="Praticidade, economia e roupas impecáveis. Self-service 24h em Itaipuaçu, Maricá-RJ." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy-deep: #03203F;
+    --navy: #052E5C;
+    --navy-soft: #0A3F77;
+    --cyan: #2BA8DD;
+    --cyan-bright: #5BC4E8;
+    --cyan-glow: #7AD4F0;
+    --white: #FFFFFF;
+    --white-soft: #E8F4FA;
+    --whatsapp: #25D366;
+    --pix: #32BCAD;
+    --shadow-soft: 0 14px 40px rgba(2, 16, 32, 0.30);
+    --shadow-strong: 0 24px 60px rgba(2, 16, 32, 0.50);
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    font-family: 'Nunito', sans-serif;
+    color: var(--white);
+    background: var(--navy-deep);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img{ max-width:100%; display:block; }
+
+  /* ===== AMBIENTE ===== */
+  .bg-ambient{
+    position: fixed; inset: 0; z-index: -1;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(43, 168, 221, 0.18), transparent 45%),
+      radial-gradient(circle at 85% 70%, rgba(91, 196, 232, 0.12), transparent 50%),
+      linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-deep) 100%);
+  }
+  .bubble{
+    position: absolute; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), rgba(91,196,232,0.05) 60%, transparent 80%);
+    border: 1px solid rgba(91,196,232,0.25);
+    pointer-events: none; animation: float 14s ease-in-out infinite;
+  }
+  .bubble.b1{ width:140px; height:140px; top:12%; left:6%; animation-delay:-2s; }
+  .bubble.b2{ width:80px; height:80px; top:30%; right:10%; animation-delay:-5s; }
+  .bubble.b3{ width:200px; height:200px; bottom:15%; left:8%; animation-delay:-7s; opacity:.7; }
+  .bubble.b4{ width:60px; height:60px; top:60%; right:25%; animation-delay:-3s; }
+  .bubble.b5{ width:110px; height:110px; bottom:30%; right:5%; animation-delay:-9s; }
+  @keyframes float{
+    0%,100%{ transform: translateY(0) translateX(0); }
+    50%{ transform: translateY(-30px) translateX(15px); }
+  }
+
+  /* ===== NAVBAR ===== */
+  header{
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    background: rgba(3, 32, 63, 0.78);
+    border-bottom: 1px solid rgba(91, 196, 232, 0.12);
+  }
+  .nav-wrap{
+    max-width: 1240px; margin: 0 auto; padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .nav-logo img{ height: 44px; width:auto; display:block; }
+  nav ul{ list-style: none; display: flex; gap: 30px; align-items: center; }
+  nav a{
+    color: var(--white-soft); text-decoration: none; font-weight: 600; font-size: 15px;
+    transition: color .2s ease; font-family: 'Quicksand', sans-serif;
+  }
+  nav a:hover{ color: var(--cyan-bright); }
+  .nav-cta{
+    background: var(--cyan); color: var(--white) !important;
+    padding: 10px 22px; border-radius: 999px; transition: all .25s ease;
+    box-shadow: 0 8px 22px rgba(43,168,221,.35);
+  }
+  .nav-cta:hover{ background: var(--cyan-bright); transform: translateY(-2px); }
+  .menu-btn{ display:none; background:none; border:none; color:var(--white); font-size:26px; cursor:pointer; padding:6px; }
+
+  /* ===== HERO ===== */
+  .hero{
+    max-width: 1240px; margin: 0 auto; padding: 70px 32px 90px;
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px;
+    align-items: center; position: relative;
+  }
+  .hero-tag{
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(43,168,221,.15); border: 1px solid rgba(43,168,221,.35);
+    padding: 8px 18px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 700; color: var(--cyan-bright);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-bottom: 24px; font-family: 'Quicksand', sans-serif;
+  }
+  .hero-tag .dot{
+    width:8px; height:8px; border-radius:50%; background: var(--cyan-bright);
+    box-shadow: 0 0 12px var(--cyan-bright);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{ opacity:1; transform:scale(1); }
+    50%{ opacity:.5; transform:scale(1.4); }
+  }
+  h1.hero-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 700; line-height: 1.05;
+    letter-spacing: -1.5px; margin-bottom: 22px;
+  }
+  h1.hero-title span{
+    background: linear-gradient(135deg, var(--cyan-bright) 0%, var(--cyan) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero-text{
+    font-size: 18px; color: rgba(232,244,250,.82);
+    max-width: 530px; margin-bottom: 32px;
+  }
+  .hero-stats{
+    display: flex; gap: 30px; margin-bottom: 32px; flex-wrap: wrap;
+  }
+  .hero-stat{ display:flex; flex-direction: column; }
+  .hero-stat strong{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--cyan-bright); line-height: 1;
+  }
+  .hero-stat span{
+    font-size: 12.5px; color: rgba(232,244,250,.65);
+    text-transform: uppercase; letter-spacing: 1.2px;
+    margin-top: 6px; font-weight: 600;
+  }
+  .hero-cta{ display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn{
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 999px;
+    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 16px;
+    text-decoration: none; cursor: pointer; border: none;
+    transition: all .25s ease;
+  }
+  .btn-primary{
+    background: linear-gradient(135deg, var(--cyan-bright) 0%, var(--cyan) 100%);
+    color: var(--white);
+    box-shadow: 0 12px 30px rgba(43,168,221,.4);
+  }
+  .btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 18px 40px rgba(43,168,221,.55); }
+  .btn-ghost{
+    background: transparent; color: var(--white);
+    border: 2px solid rgba(91,196,232,.4);
+  }
+  .btn-ghost:hover{ border-color: var(--cyan-bright); background: rgba(43,168,221,.1); }
+
+  /* HERO VISUAL: máquina */
+  .hero-visual{
+    position: relative; aspect-ratio: 1;
+    max-width: 500px; margin: 0 auto;
+  }
+  .machine-illustration{
+    position: relative; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 45%, rgba(91,196,232,.18), rgba(5,46,92,.6) 60%, transparent 80%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .machine-illustration::before{
+    content:""; position: absolute; inset: 18%;
+    border-radius: 50%; border: 3px solid var(--cyan);
+    background: rgba(3,32,63,.4);
+    box-shadow: 0 0 60px rgba(43,168,221,.3), inset 0 0 40px rgba(43,168,221,.2);
+  }
+  .machine-illustration::after{
+    content:""; position: absolute; inset: 24%;
+    border-radius: 50%; border: 2px dashed rgba(91,196,232,.4);
+    animation: spin 22s linear infinite;
+  }
+  @keyframes spin{ to{ transform: rotate(360deg); } }
+  .water-fill{
+    position: absolute; bottom: 30%; left: 30%; right: 30%; height: 28%;
+    background: linear-gradient(180deg, var(--cyan) 0%, var(--navy-soft) 100%);
+    border-radius: 0 0 50% 50% / 0 0 30% 30%;
+    overflow: hidden;
+  }
+  .water-fill::before, .water-fill::after{
+    content:""; position: absolute; top: -8px; left: -10%;
+    width: 120%; height: 16px;
+    background: var(--cyan-bright); border-radius: 50%;
+    animation: wave 3.5s ease-in-out infinite;
+  }
+  .water-fill::after{
+    top: -6px; background: rgba(122,212,240,.5);
+    animation-delay: -1.5s; animation-duration: 4.5s;
+  }
+  @keyframes wave{
+    0%,100%{ transform: translateX(-5%); }
+    50%{ transform: translateX(5%); }
+  }
+  .small-bubble{
+    position: absolute; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.6), rgba(122,212,240,.3) 50%, transparent 80%);
+    animation: rise 5s ease-in infinite;
+  }
+  .sb1{ width:18px; height:18px; bottom:30%; left:42%; animation-delay:0s; }
+  .sb2{ width:12px; height:12px; bottom:30%; left:55%; animation-delay:-1.2s; }
+  .sb3{ width:22px; height:22px; bottom:30%; left:50%; animation-delay:-2.4s; }
+  .sb4{ width:8px; height:8px; bottom:30%; left:38%; animation-delay:-3.5s; }
+  @keyframes rise{
+    0%{ transform: translateY(0); opacity:0; }
+    20%{ opacity:1; }
+    100%{ transform: translateY(-160px); opacity:0; }
+  }
+  .lg-badge{
+    position: absolute; top: 8%; right: 4%;
+    background: var(--white); color: var(--navy-deep);
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 14px;
+    padding: 10px 18px; border-radius: 999px;
+    box-shadow: var(--shadow-soft);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .lg-badge .lg-mark{
+    background: linear-gradient(135deg, #A50034 0%, #C5003B 100%);
+    color: white; width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800; letter-spacing: -0.5px;
+  }
+
+  /* ===== SECTION COMMON ===== */
+  section{ position: relative; }
+  .container{ max-width: 1240px; margin: 0 auto; padding: 90px 32px; }
+  .section-tag{
+    display: inline-block; font-size: 12.5px; font-weight: 700;
+    color: var(--cyan-bright); text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 14px; font-family: 'Quicksand', sans-serif;
+  }
+  .section-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 700; line-height: 1.1;
+    letter-spacing: -1px; margin-bottom: 18px;
+  }
+  .section-text{
+    font-size: 17px; color: rgba(232,244,250,.75);
+    max-width: 640px; margin-bottom: 50px;
+  }
+  .section-head.center{ text-align: center; }
+  .section-head.center .section-text{ margin-left:auto; margin-right:auto; }
+
+  /* ===== COMO FUNCIONA ===== */
+  .steps{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .step{
+    background: linear-gradient(180deg, rgba(10,63,119,.35) 0%, rgba(3,32,63,.3) 100%);
+    border: 1px solid rgba(91,196,232,.18);
+    border-radius: 22px; padding: 30px 24px;
+    position: relative; transition: all .35s ease; overflow: hidden;
+  }
+  .step::before{
+    content:""; position: absolute; top:-30%; right:-30%;
+    width: 80%; height: 80%;
+    background: radial-gradient(circle, rgba(43,168,221,.18), transparent 70%);
+    pointer-events: none;
+  }
+  .step:hover{
+    transform: translateY(-6px);
+    border-color: rgba(91,196,232,.5);
+    box-shadow: var(--shadow-soft);
+  }
+  .step-num{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: var(--cyan-bright); margin-bottom: 14px; letter-spacing: 1px;
+  }
+  .step-icon{
+    width: 54px; height: 54px; border-radius: 16px;
+    background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-bright) 100%);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px; color: white;
+  }
+  .step h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 19px; font-weight: 700; margin-bottom: 8px;
+  }
+  .step p{ color: rgba(232,244,250,.72); font-size: 14.5px; line-height: 1.55; }
+
+  /* ===== DIFERENCIAIS ===== */
+  .differentials{
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  }
+  .differential{
+    background: linear-gradient(150deg, rgba(43,168,221,.10) 0%, rgba(3,32,63,.4) 100%);
+    border: 1px solid rgba(91,196,232,.2);
+    border-radius: 20px; padding: 32px 26px;
+    transition: all .35s ease; position: relative; overflow: hidden;
+  }
+  .differential::after{
+    content:""; position: absolute; bottom: -50%; left: -20%;
+    width: 80%; height: 80%;
+    background: radial-gradient(circle, rgba(91,196,232,.12), transparent 70%);
+    pointer-events: none;
+  }
+  .differential:hover{
+    transform: translateY(-5px);
+    border-color: var(--cyan-bright);
+    box-shadow: var(--shadow-soft);
+  }
+  .diff-icon{
+    width: 56px; height: 56px; border-radius: 14px;
+    background: rgba(43,168,221,.18);
+    border: 1px solid rgba(91,196,232,.4);
+    display: flex; align-items:center; justify-content:center;
+    margin-bottom: 18px; color: var(--cyan-bright);
+  }
+  .differential h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 19px; font-weight: 700; margin-bottom: 8px;
+  }
+  .differential p{ color: rgba(232,244,250,.72); font-size: 15px; }
+
+  /* ===== MÁQUINAS LG ===== */
+  .lg-section{
+    background: linear-gradient(180deg, transparent 0%, rgba(10,63,119,.20) 50%, transparent 100%);
+  }
+  .lg-grid{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
+  }
+  .lg-visual{
+    position: relative; aspect-ratio: 1;
+    max-width: 480px; margin: 0 auto;
+    background: linear-gradient(150deg, rgba(43,168,221,.12), rgba(3,32,63,.4));
+    border-radius: 28px; border: 1px solid rgba(91,196,232,.2);
+    padding: 30px; overflow: hidden;
+  }
+  .lg-machines{
+    width: 100%; height: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-content: center;
+  }
+  .lg-machine{
+    position: relative;
+    background: linear-gradient(180deg, #f5f7f9 0%, #d5dde2 100%);
+    border-radius: 14px; aspect-ratio: 0.85;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.9), 0 14px 30px rgba(0,0,0,.3);
+    padding: 14px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lg-machine .top-panel{
+    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+    border-radius: 6px; height: 14%;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 10px;
+    color: #5BC4E8;
+    font-family: 'Quicksand', sans-serif; font-size: 9px; font-weight: 700;
+  }
+  .lg-machine .top-panel .led{
+    width: 5px; height: 5px; background: #5BC4E8; border-radius: 50%;
+    box-shadow: 0 0 6px #5BC4E8;
+  }
+  .lg-machine .door{
+    flex: 1;
+    background: radial-gradient(circle at 35% 30%, #4a5560 0%, #1a2028 70%);
+    border-radius: 50%; border: 6px solid #c0c8cf;
+    position: relative;
+    box-shadow: inset 0 0 20px rgba(0,0,0,.6);
+    overflow: hidden;
+  }
+  .lg-machine .door::before{
+    content:""; position: absolute; inset: 18%;
+    border-radius: 50%; border: 2px dashed rgba(91,196,232,.4);
+    animation: spin 30s linear infinite;
+  }
+  .lg-machine .door::after{
+    content:""; position: absolute; top: 12%; left: 20%;
+    width: 30%; height: 25%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,.4), transparent 70%);
+    border-radius: 50%;
+  }
+  .lg-machine .bottom-panel{
+    background: #f5f7f9; border-radius: 4px; height: 8%;
+    display: flex; align-items: center; justify-content: center;
+    color: #A50034; font-family: 'Quicksand', sans-serif;
+    font-weight: 800; font-size: 10px; letter-spacing: -0.5px;
+  }
+  .lg-machine.dryer .door{
+    background: radial-gradient(circle at 35% 30%, #5a4530 0%, #2a1f15 70%);
+  }
+  .lg-features{ list-style: none; margin-top: 22px; }
+  .lg-features li{
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 12px 0; border-bottom: 1px solid rgba(91,196,232,.12);
+    font-size: 15.5px; color: rgba(232,244,250,.85);
+  }
+  .lg-features li:last-child{ border-bottom: none; }
+  .lg-features svg{ flex-shrink: 0; color: var(--cyan-bright); margin-top: 2px; }
+  .lg-features strong{
+    color: var(--white); font-family: 'Quicksand', sans-serif;
+    font-weight: 700; display: block; margin-bottom: 2px;
+  }
+
+  /* ===== PAGAMENTO ===== */
+  .payment-section{
+    background: linear-gradient(180deg, transparent 0%, rgba(43,168,221,.08) 50%, transparent 100%);
+  }
+  .payment-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .pay-card{
+    background: linear-gradient(150deg, rgba(43,168,221,.10) 0%, rgba(3,32,63,.4) 100%);
+    border: 1px solid rgba(91,196,232,.2);
+    border-radius: 20px; padding: 32px 28px;
+    transition: all .35s ease; text-align: center;
+  }
+  .pay-card:hover{
+    transform: translateY(-5px);
+    border-color: var(--cyan-bright);
+    box-shadow: var(--shadow-soft);
+  }
+  .pay-icon-wrap{
+    width: 72px; height: 72px; border-radius: 50%;
+    background: rgba(43,168,221,.15); border: 1px solid rgba(91,196,232,.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 18px; color: var(--cyan-bright);
+  }
+  .pay-icon-wrap.pix{
+    background: rgba(50, 188, 173, 0.18);
+    border-color: rgba(50, 188, 173, 0.5);
+    color: var(--pix);
+  }
+  .pay-card h4{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px; font-weight: 700; margin-bottom: 8px;
+  }
+  .pay-card p{ color: rgba(232,244,250,.7); font-size: 14.5px; }
+  .card-flags{
+    display: flex; justify-content: center; gap: 8px;
+    margin-top: 14px; flex-wrap: wrap;
+  }
+  .flag{
+    background: white; color: var(--navy-deep);
+    font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 10px;
+    padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px;
+  }
+
+  /* ===== UNIDADES ===== */
+  .units-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .unit-card{
+    background: linear-gradient(150deg, rgba(43,168,221,.15) 0%, rgba(3,32,63,.5) 100%);
+    border: 1px solid rgba(91,196,232,.25);
+    border-radius: 24px; padding: 36px;
+    position: relative; overflow: hidden; transition: all .35s ease;
+  }
+  .unit-card.active{
+    border-color: var(--cyan-bright);
+    box-shadow: 0 0 0 3px rgba(91,196,232,.2), var(--shadow-soft);
+  }
+  .unit-card::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:4px;
+    background: linear-gradient(90deg, var(--cyan), var(--cyan-bright));
+    opacity: 0; transition: opacity .3s;
+  }
+  .unit-card.active::before{ opacity:1; }
+  .unit-pin{
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(43,168,221,.2); border: 1px solid rgba(91,196,232,.4);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 12px; font-weight: 700; color: var(--cyan-bright);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 16px; font-family: 'Quicksand', sans-serif;
+  }
+  .unit-card h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 26px; font-weight: 700; margin-bottom: 10px;
+  }
+  .unit-card .addr{
+    color: rgba(232,244,250,.78); font-size: 15px;
+    margin-bottom: 22px; line-height: 1.5;
+  }
+  .unit-card .meta{
+    display: flex; gap: 20px; margin-bottom: 22px; flex-wrap: wrap;
+  }
+  .meta-item{
+    display: flex; align-items: center; gap: 8px;
+    color: rgba(232,244,250,.85);
+    font-size: 13.5px; font-weight: 600;
+  }
+  .meta-item svg{ width:18px; height:18px; color: var(--cyan-bright); }
+  .unit-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+  .btn-locate{
+    flex: 1; min-width: 170px;
+    background: linear-gradient(135deg, var(--cyan-bright) 0%, var(--cyan) 100%);
+    color: var(--white);
+    padding: 14px 22px; border: none; border-radius: 14px;
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 14.5px;
+    cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    transition: all .25s ease;
+    box-shadow: 0 8px 22px rgba(43,168,221,.35);
+  }
+  .btn-locate:hover{ transform: translateY(-2px); box-shadow: 0 14px 32px rgba(43,168,221,.5); }
+  .btn-route{
+    background: rgba(91,196,232,.1); color: var(--white);
+    border: 1px solid rgba(91,196,232,.4);
+    padding: 14px 22px; border-radius: 14px; text-decoration: none;
+    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 14.5px;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all .25s ease;
+  }
+  .btn-route:hover{ background: rgba(91,196,232,.2); border-color: var(--cyan-bright); }
+
+  .map-wrapper{
+    margin-top: 0;
+    background: linear-gradient(150deg, rgba(43,168,221,.1) 0%, rgba(3,32,63,.5) 100%);
+    border: 1px solid rgba(91,196,232,.25);
+    border-radius: 24px; overflow: hidden;
+    max-height: 0; opacity: 0;
+    transition: max-height .55s ease, opacity .4s ease, margin-top .3s ease;
+  }
+  .map-wrapper.open{ max-height: 700px; opacity: 1; margin-top: 16px; }
+  .map-header{
+    padding: 18px 26px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    border-bottom: 1px solid rgba(91,196,232,.15);
+    flex-wrap: wrap;
+  }
+  .map-header h4{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px; font-weight: 700;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .map-header h4 svg{ width:22px; height:22px; color: var(--cyan-bright); }
+  .map-close{
+    background: rgba(255,255,255,.08); color: var(--white);
+    border: 1px solid rgba(91,196,232,.3);
+    width: 34px; height: 34px; border-radius: 50%;
+    cursor: pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition: all .2s; font-size: 18px;
+  }
+  .map-close:hover{ background: rgba(91,196,232,.2); }
+  .map-frame{
+    position: relative; width: 100%; height: 440px; background: var(--navy);
+  }
+  .map-frame iframe{ width: 100%; height: 100%; border: 0; display: block; }
+
+  /* ===== DICAS ===== */
+  .tips-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .tip-card{
+    background: linear-gradient(150deg, rgba(43,168,221,.10) 0%, rgba(3,32,63,.45) 100%);
+    border: 1px solid rgba(91,196,232,.2);
+    border-radius: 22px; overflow: hidden;
+    transition: all .35s ease;
+    text-decoration: none; color: var(--white);
+    display: flex; flex-direction: column;
+  }
+  .tip-card:hover{
+    transform: translateY(-6px);
+    border-color: var(--cyan-bright);
+    box-shadow: var(--shadow-soft);
+  }
+  .tip-thumb{
+    aspect-ratio: 16/10;
+    position: relative; overflow: hidden;
+  }
+  .tip-thumb::after{
+    content:""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(3,32,63,.7));
+  }
+  .tip-thumb .play{
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; height: 60px;
+    background: rgba(255,255,255,.95);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--navy-deep); z-index: 2;
+    transition: transform .25s ease;
+  }
+  .tip-card:hover .play{ transform: translate(-50%, -50%) scale(1.1); }
+  .tip-thumb-bg{
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 70px; opacity: .55;
+  }
+  .tip-tag{
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(3,32,63,.85); color: var(--cyan-bright);
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 11px;
+    padding: 5px 12px; border-radius: 999px;
+    text-transform: uppercase; letter-spacing: 1px; z-index: 3;
+  }
+  .tip-content{
+    padding: 22px 24px 26px;
+    flex: 1; display: flex; flex-direction: column;
+  }
+  .tip-content h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 8px; line-height: 1.3;
+  }
+  .tip-content p{
+    color: rgba(232,244,250,.7); font-size: 14.5px;
+    flex: 1; margin-bottom: 14px;
+  }
+  .tip-link{
+    color: var(--cyan-bright); font-family: 'Quicksand', sans-serif;
+    font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; gap: 6px;
+    transition: gap .25s ease;
+  }
+  .tip-card:hover .tip-link{ gap: 10px; }
+
+  /* ===== AVALIAÇÃO GOOGLE ===== */
+  .review-band{
+    background: linear-gradient(135deg, rgba(43,168,221,.18), rgba(10,63,119,.5));
+    border: 1px solid rgba(91,196,232,.25);
+    border-radius: 32px; padding: 50px;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 40px; align-items: center;
+    max-width: 1100px; margin: 0 auto;
+    position: relative; overflow: hidden;
+  }
+  .review-band::before{
+    content:""; position: absolute;
+    top: -50%; right: -10%;
+    width: 60%; height: 200%;
+    background: radial-gradient(circle, rgba(91,196,232,.15), transparent 60%);
+    pointer-events: none;
+  }
+  .review-content{ position: relative; z-index: 1; }
+  .review-stars{
+    display: flex; gap: 4px; margin-bottom: 14px; color: #FFC43A;
+  }
+  .review-content h2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 700; line-height: 1.15; margin-bottom: 12px;
+  }
+  .review-content p{
+    color: rgba(232,244,250,.8); font-size: 16px;
+    margin-bottom: 24px; max-width: 540px;
+  }
+  .review-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn-google{
+    background: white; color: var(--navy-deep);
+    padding: 14px 26px; border-radius: 999px;
+    font-family: 'Quicksand', sans-serif; font-weight: 700;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 10px;
+    transition: all .25s ease;
+    box-shadow: var(--shadow-soft);
+  }
+  .btn-google:hover{ transform: translateY(-2px); box-shadow: var(--shadow-strong); }
+  .qr-wrap{
+    background: white; padding: 14px; border-radius: 18px;
+    text-align: center; box-shadow: var(--shadow-strong);
+    position: relative; z-index: 1;
+  }
+  .qr-wrap img{
+    width: 160px; height: 160px;
+    display: block; margin: 0 auto 8px;
+  }
+  .qr-wrap span{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--navy-deep); font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background: var(--navy-deep);
+    border-top: 1px solid rgba(91,196,232,.15);
+    padding: 60px 32px 30px; margin-top: 60px;
+  }
+  .foot-grid{
+    max-width: 1240px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px; margin-bottom: 40px;
+  }
+  .foot-logo img{ height: 50px; margin-bottom: 16px; }
+  .foot-grid p, .foot-grid li{
+    color: rgba(232,244,250,.7); font-size: 14px; margin-bottom: 8px;
+  }
+  .foot-grid h5{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--white); font-size: 15.5px; font-weight: 700; margin-bottom: 16px;
+  }
+  .foot-grid ul{ list-style: none; }
+  .foot-grid a{ color: rgba(232,244,250,.7); text-decoration: none; transition: color .2s; }
+  .foot-grid a:hover{ color: var(--cyan-bright); }
+  .socials{ display:flex; gap:10px; margin-top:14px; }
+  .socials a{
+    width: 42px; height: 42px; border-radius: 12px;
+    background: rgba(91,196,232,.12);
+    border: 1px solid rgba(91,196,232,.3);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--cyan-bright);
+    transition: all .25s ease;
+  }
+  .socials a:hover{ background: var(--cyan); color: var(--white); transform: translateY(-2px); }
+  .copyright{
+    max-width: 1240px; margin: 0 auto; padding-top: 24px;
+    border-top: 1px solid rgba(91,196,232,.12);
+    text-align: center;
+    color: rgba(232,244,250,.5); font-size: 13px;
+  }
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .whatsapp-float{
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--whatsapp); border-radius: 999px;
+    display: flex; align-items: center; color: white;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    z-index: 99; transition: all .25s ease;
+    text-decoration: none;
+    padding: 14px 22px 14px 14px; gap: 10px;
+    font-family: 'Quicksand', sans-serif; font-weight: 700;
+  }
+  .whatsapp-float:hover{
+    transform: scale(1.05);
+    box-shadow: 0 14px 38px rgba(37, 211, 102, 0.7);
+  }
+  .whatsapp-float .icon{
+    width: 36px; height: 36px;
+    background: white; color: var(--whatsapp); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .whatsapp-float .icon svg{ width: 22px; height: 22px; }
+  .whatsapp-float .label{ font-size: 14px; }
+  .whatsapp-float .pulse{
+    position: absolute; top: 8px; left: 8px;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--whatsapp); z-index: -1;
+    animation: pulseRing 2s ease-out infinite;
+  }
+  @keyframes pulseRing{
+    0%{ transform: scale(1); opacity:.7; }
+    100%{ transform: scale(1.7); opacity:0; }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 980px){
+    .hero{
+      grid-template-columns: 1fr;
+      padding: 50px 20px 60px;
+      gap: 40px; text-align: center;
+    }
+    .hero-tag, .hero-stats{ margin-left:auto; margin-right:auto; }
+    .hero-stats{ justify-content: center; }
+    .hero-text{ margin-left:auto; margin-right:auto; }
+    .hero-cta{ justify-content: center; }
+    .hero-visual{ max-width: 360px; }
+    .container{ padding: 60px 20px; }
+    .lg-grid{ grid-template-columns: 1fr; gap: 30px; }
+    .review-band{
+      grid-template-columns: 1fr;
+      padding: 40px 28px; text-align: center;
+    }
+    .review-actions{ justify-content: center; }
+    .qr-wrap{ margin: 0 auto; }
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 760px) and (max-width: 980px){
+    .steps{ grid-template-columns: repeat(2, 1fr); }
+    .differentials, .payment-grid, .tips-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px){
+    .nav-wrap{ padding: 12px 20px; }
+    nav ul{ display:none; }
+    .menu-btn{ display:block; }
+    nav ul.open{
+      display: flex; flex-direction: column;
+      position: absolute; top: 70px; right: 16px; left: 16px;
+      background: rgba(3,32,63,0.98); padding: 20px;
+      border-radius: 14px; border: 1px solid rgba(91,196,232,.2);
+      gap: 18px; backdrop-filter: blur(10px);
+    }
+    .steps, .differentials, .payment-grid, .tips-grid{
+      grid-template-columns: 1fr;
+    }
+    .units-grid{ grid-template-columns: 1fr; }
+    .whatsapp-float .label{ display:none; }
+    .whatsapp-float{ padding: 12px; }
+    .foot-grid{ grid-template-columns: 1fr; gap: 30px; }
+  }
+  @media (max-width: 540px){
+    .map-frame{ height: 360px; }
+    .unit-card{ padding: 26px 22px; }
+    .container{ padding: 50px 18px; }
+    .review-band{ padding: 32px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-ambient">
+  <div class="bubble b1"></div><div class="bubble b2"></div>
+  <div class="bubble b3"></div><div class="bubble b4"></div><div class="bubble b5"></div>
+</div>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#" class="nav-logo"><img src="logo.png" alt="Lavblue Itaipuaçu" /></a>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#unidades">Unidades</a></li>
+        <li><a href="#dicas">Dicas</a></li>
+        <li><a href="#unidades" class="nav-cta">Encontrar unidade</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-tag"><span class="dot"></span> Self-service • Itaipuaçu • Maricá-RJ</span>
+    <h1 class="hero-title">Lave e seque suas roupas <span>em poucos minutos.</span></h1>
+    <p class="hero-text">
+      Praticidade, economia e roupas impecáveis. Na Lavblue Itaipuaçu você cuida das suas roupas com tecnologia LG,
+      ambiente climatizado, Wi-Fi grátis e sem complicação. Aberta 24h, todos os dias.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>24h</strong><span>Aberta sempre</span></div>
+      <div class="hero-stat"><strong>~30min</strong><span>Lavar e secar</span></div>
+      <div class="hero-stat"><strong>2</strong><span>Unidades</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="#unidades" class="btn btn-primary">
+        Encontrar unidade
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      </a>
+      <a href="#como-funciona" class="btn btn-ghost">Como funciona</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="machine-illustration">
+      <div class="water-fill">
+        <div class="small-bubble sb1"></div><div class="small-bubble sb2"></div>
+        <div class="small-bubble sb3"></div><div class="small-bubble sb4"></div>
+      </div>
+    </div>
+    <div class="lg-badge"><span class="lg-mark">LG</span><span>Tecnologia LG</span></div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-tag">Simplicidade em 4 passos</span>
+      <h2 class="section-title">Como funciona a Lavblue</h2>
+      <p class="section-text">Em poucos minutos você lava, seca e leva suas roupas prontas para casa. Sem complicação.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">PASSO 01</div>
+        <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/></svg></div>
+        <h3>Traga suas roupas</h3>
+        <p>Vá até a unidade Lavblue mais próxima de você.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">PASSO 02</div>
+        <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 14h2"/></svg></div>
+        <h3>Pague no totem</h3>
+        <p>Débito, crédito ou Pix direto no totem da loja.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">PASSO 03</div>
+        <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M7 7h.01"/></svg></div>
+        <h3>Coloque na máquina</h3>
+        <p>Selecione a máquina LG, coloque as roupas e relaxe.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">PASSO 04</div>
+        <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5 11 13l4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <h3>Roupas prontas</h3>
+        <p>Em poucos minutos suas roupas saem limpas e secas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-tag">Por que Lavblue?</span>
+      <h2 class="section-title">Muito mais que uma lavanderia</h2>
+      <p class="section-text">Um novo estilo de vida. Aqui você encontra qualidade, conforto e economia em um só lugar.</p>
+    </div>
+    <div class="differentials">
+      <div class="differential">
+        <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Produtos premium inclusos</h3>
+        <p>Detergentes e amaciantes de alta qualidade já inclusos no preço, para resultados impecáveis em cada lavagem.</p>
+      </div>
+      <div class="differential">
+        <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Aberta 24 horas</h3>
+        <p>Lave suas roupas a qualquer hora do dia ou da noite, todos os dias da semana. Liberdade total para sua rotina.</p>
+      </div>
+      <div class="differential">
+        <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+        <h3>Wi-Fi grátis e ambiente climatizado</h3>
+        <p>Espaço seguro, climatizado, com Wi-Fi gratuito. Tudo pensado para o seu conforto enquanto você espera.</p>
+      </div>
+      <div class="differential">
+        <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M7 7h.01"/></svg></div>
+        <h3>Máquinas LG de alta capacidade</h3>
+        <p>Lavadoras e secadoras LG comerciais com tecnologia de ponta, lavando grandes volumes em ciclos rápidos.</p>
+      </div>
+      <div class="differential">
+        <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Self-service prático e rápido</h3>
+        <p>Sem espera, sem complicação. Você mesmo opera as máquinas em poucos passos, com total autonomia.</p>
+      </div>
+      <div class="differential">
+        <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Preço justo e transparente</h3>
+        <p>Preços acessíveis, sem taxas escondidas. Você economiza tempo e dinheiro a cada lavagem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÁQUINAS LG -->
+<section class="lg-section" id="maquinas">
+  <div class="container">
+    <div class="lg-grid">
+      <div class="lg-visual">
+        <div class="lg-machines">
+          <div class="lg-machine">
+            <div class="top-panel"><span>WASHER</span><span class="led"></span></div>
+            <div class="door"></div>
+            <div class="bottom-panel">LG</div>
+          </div>
+          <div class="lg-machine dryer">
+            <div class="top-panel"><span>DRYER</span><span class="led"></span></div>
+            <div class="door"></div>
+            <div class="bottom-panel">LG</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="section-tag">Tecnologia LG</span>
+        <h2 class="section-title">Equipamentos de ponta para suas roupas</h2>
+        <p class="section-text" style="margin-bottom: 8px;">Trabalhamos com lavadoras e secadoras LG comerciais, referência mundial em lavanderias self-service.</p>
+        <ul class="lg-features">
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Alta capacidade</strong>Lavadoras e secadoras que comportam grandes volumes em um único ciclo.</div>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Economia de energia e água</strong>Tecnologia eficiente que protege o meio ambiente e seu bolso.</div>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Ciclos rápidos</strong>Lavagem completa em cerca de 30 minutos. Secagem em poucos minutos.</div>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Cuidado com os tecidos</strong>Centrifugação suave e secagem uniforme que preservam suas roupas.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGAMENTO -->
+<section class="payment-section" id="pagamento">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-tag">Pagamento</span>
+      <h2 class="section-title">Pague do jeito que preferir</h2>
+      <p class="section-text">Aceitamos os principais métodos de pagamento, direto no totem da loja.</p>
+    </div>
+    <div class="payment-grid">
+      <div class="pay-card">
+        <div class="pay-icon-wrap">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+          </svg>
+        </div>
+        <h4>Cartão de Débito</h4>
+        <p>Pagamento direto no totem com aprovação imediata. Prático e seguro.</p>
+        <div class="card-flags">
+          <span class="flag">VISA</span><span class="flag">MASTER</span><span class="flag">ELO</span>
+        </div>
+      </div>
+      <div class="pay-card">
+        <div class="pay-icon-wrap">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+            <line x1="6" y1="15" x2="10" y2="15"/>
+          </svg>
+        </div>
+        <h4>Cartão de Crédito</h4>
+        <p>Pague à vista com seu cartão de crédito, com toda a praticidade que você precisa.</p>
+        <div class="card-flags">
+          <span class="flag">VISA</span><span class="flag">MASTER</span>
+          <span class="flag">ELO</span><span class="flag">AMEX</span>
+        </div>
+      </div>
+      <div class="pay-card">
+        <div class="pay-icon-wrap pix">
+          <svg width="38" height="38" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.633 21.554a3.953 3.953 0 0 1-2.812-1.165l-4.057-4.057a.78.78 0 0 0-1.077 0l-4.075 4.075a3.945 3.945 0 0 1-2.811 1.165h-.798l5.139 5.142a4.111 4.111 0 0 0 5.806 0l5.156-5.16h-.471zM9.802 10.373a3.948 3.948 0 0 1 2.811 1.166l4.075 4.075a.762.762 0 0 0 1.078 0l4.058-4.058a3.952 3.952 0 0 1 2.811-1.165h.488L20.005 5.21a4.105 4.105 0 0 0-5.806 0l-5.139 5.165h.742zM27.852 13.106l-3.111-3.111a.616.616 0 0 1-.224.045h-1.886a2.793 2.793 0 0 0-1.96.812l-4.057 4.058a1.967 1.967 0 0 1-2.788 0l-4.075-4.075a2.79 2.79 0 0 0-1.961-.813H5.476a.59.59 0 0 1-.211-.041L2.142 13.11a4.108 4.108 0 0 0 0 5.806l3.123 3.123a.6.6 0 0 1 .211-.041h2.314a2.79 2.79 0 0 0 1.961-.813l4.075-4.075a2.018 2.018 0 0 1 2.788 0l4.057 4.057a2.793 2.793 0 0 0 1.96.813h1.887a.616.616 0 0 1 .224.045l3.111-3.111a4.108 4.108 0 0 0 0-5.806z"/>
+          </svg>
+        </div>
+        <h4>Pix</h4>
+        <p>Aprovação instantânea, sem taxas. Pague em segundos com QR Code direto no totem.</p>
+        <div class="card-flags">
+          <span class="flag" style="color: #32BCAD;">INSTANTÂNEO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIDADES -->
+<section id="unidades">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-tag">Encontre a unidade</span>
+      <h2 class="section-title">Estamos pertinho de você</h2>
+      <p class="section-text">Clique em uma das unidades abaixo para abrir o mapa com a localização exata e ver como chegar.</p>
+    </div>
+    <div class="units-grid">
+      <!-- UNIDADE 1 -->
+      <div class="unit-block">
+        <div class="unit-card" id="unit-1">
+          <span class="unit-pin">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Unidade 01
+          </span>
+          <h3>Praça da 70</h3>
+          <p class="addr">Itaipuaçu, Maricá – RJ<br/>Próximo à Praça da Avenida 70</p>
+          <div class="meta">
+            <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Aberto 24h</span>
+            <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="4"/></svg>Self-service</span>
+          </div>
+          <div class="unit-actions">
+            <button class="btn-locate" data-unit="1" data-target="map-1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ver no mapa
+            </button>
+            <a class="btn-route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=-22.969992,-42.9393024">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              Como chegar
+            </a>
+          </div>
+        </div>
+        <div class="map-wrapper" id="map-1">
+          <div class="map-header">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lavblue – Praça da 70
+            </h4>
+            <button class="map-close" aria-label="Fechar mapa" data-close="map-1">×</button>
+          </div>
+          <div class="map-frame"></div>
+        </div>
+      </div>
+      <!-- UNIDADE 2 -->
+      <div class="unit-block">
+        <div class="unit-card" id="unit-2">
+          <span class="unit-pin">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Unidade 02
+          </span>
+          <h3>Prof. Cardoso de Menezes</h3>
+          <p class="addr">Rua Professor Cardoso de Menezes<br/>Jardim Atlântico Oeste – Itaipuaçu, Maricá – RJ</p>
+          <div class="meta">
+            <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Aberto 24h</span>
+            <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="4"/></svg>Self-service</span>
+          </div>
+          <div class="unit-actions">
+            <button class="btn-locate" data-unit="2" data-target="map-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ver no mapa
+            </button>
+            <a class="btn-route" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Lavblue+Rua+Professor+Cardoso+de+Menezes+Itaipua%C3%A7u+Marica">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              Como chegar
+            </a>
+          </div>
+        </div>
+        <div class="map-wrapper" id="map-2">
+          <div class="map-header">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lavblue – Prof. Cardoso de Menezes
+            </h4>
+            <button class="map-close" aria-label="Fechar mapa" data-close="map-2">×</button>
+          </div>
+          <div class="map-frame"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DICAS DE LAVANDERIA -->
+<section id="dicas">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-tag">Macetes Lavblue</span>
+      <h2 class="section-title">Dicas de lavanderia</h2>
+      <p class="section-text">Aprenda truques, dicas e macetes para deixar suas roupas sempre impecáveis.</p>
+    </div>
+    <div class="tips-grid">
+      <a href="#" class="tip-card" data-tip="separar">
+        <div class="tip-thumb" style="background: linear-gradient(135deg, #0A3F77 0%, #2BA8DD 100%);">
+          <span class="tip-tag">VÍDEO</span>
+          <div class="tip-thumb-bg">🎨</div>
+          <div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        </div>
+        <div class="tip-content">
+          <h3>Como separar roupas por cor</h3>
+          <p>Aprenda o jeito certo de separar suas roupas para evitar que elas desbotem ou manchem na lavagem.</p>
+          <span class="tip-link">Ver dica <span>→</span></span>
+        </div>
+      </a>
+      <a href="#" class="tip-card" data-tip="manchas">
+        <div class="tip-thumb" style="background: linear-gradient(135deg, #2BA8DD 0%, #5BC4E8 100%);">
+          <span class="tip-tag">ARTIGO</span>
+          <div class="tip-thumb-bg">🧴</div>
+          <div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        </div>
+        <div class="tip-content">
+          <h3>Removendo manchas difíceis</h3>
+          <p>Tinta, óleo, sangue, vinho? Veja como tratar cada tipo de mancha antes da lavagem.</p>
+          <span class="tip-link">Ler artigo <span>→</span></span>
+        </div>
+      </a>
+      <a href="#" class="tip-card" data-tip="edredom">
+        <div class="tip-thumb" style="background: linear-gradient(135deg, #03203F 0%, #0A3F77 100%);">
+          <span class="tip-tag">VÍDEO</span>
+          <div class="tip-thumb-bg">🛏️</div>
+          <div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        </div>
+        <div class="tip-content">
+          <h3>Edredom, cobertor e tapete</h3>
+          <p>Por que máquinas industriais como as nossas LG são ideais para edredons, cobertores e tapetes.</p>
+          <span class="tip-link">Ver dica <span>→</span></span>
+        </div>
+      </a>
+      <a href="#" class="tip-card" data-tip="economizar">
+        <div class="tip-thumb" style="background: linear-gradient(135deg, #2BA8DD 0%, #052E5C 100%);">
+          <span class="tip-tag">DICA</span>
+          <div class="tip-thumb-bg">💰</div>
+          <div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
+        </div>
+        <div class="tip-content">
+          <h3>Economize lavando em lote</h3>
+          <p>Junte a roupa da semana e lave tudo de uma vez nas máquinas de alta capacidade. Mais barato e prático.</p>
+          <span class="tip-link">Ver dica <span>→</span></span>
+        </div>
+      </a>
+      <a href="#" class="tip-card" data-tip="delicadas">
+        <div class="tip-thumb" style="background: linear-gradient(135deg, #5BC4E8 0%, #0A3F77 100%);">
+          <span class="tip-tag">ARTIGO</span>
+          <div class="tip-thumb-bg">👗</div>
+          <div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        </div>
+        <div class="tip-content">
+          <h3>Cuidando de peças delicadas</h3>
+          <p>Seda, lã, renda, lingerie. O passo a passo para lavar peças sensíveis sem danificá-las.</p>
+          <span class="tip-link">Ler artigo <span>→</span></span>
+        </div>
+      </a>
+      <a href="#" class="tip-card" data-tip="cheiro">
+        <div class="tip-thumb" style="background: linear-gradient(135deg, #0A3F77 0%, #5BC4E8 100%);">
+          <span class="tip-tag">VÍDEO</span>
+          <div class="tip-thumb-bg">🌸</div>
+          <div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        </div>
+        <div class="tip-content">
+          <h3>Roupas com cheirinho duradouro</h3>
+          <p>Truques simples para deixar suas roupas perfumadas por muito mais tempo no guarda-roupa.</p>
+          <span class="tip-link">Ver dica <span>→</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÃO GOOGLE -->
+<section id="avalie">
+  <div class="container">
+    <div class="review-band">
+      <div class="review-content">
+        <div class="review-stars" aria-label="5 estrelas">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h2>Gostou da Lavblue Itaipuaçu? Avalie-nos no Google!</h2>
+        <p>Sua avaliação ajuda outros clientes a conhecerem nosso serviço e a gente a melhorar cada vez mais. Leva só 1 minutinho!</p>
+        <div class="review-actions">
+          <a href="https://g.page/r/CR6smfoyApYkEBM/review" target="_blank" rel="noopener" class="btn-google">
+            <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+              <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+              <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+              <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+            </svg>
+            Avaliar no Google
+          </a>
+          <a href="#unidades" class="btn btn-ghost" style="padding: 12px 24px;">Ver unidades</a>
+        </div>
+      </div>
+      <div class="qr-wrap">
+        <img src="qr-google-review.png" alt="QR Code para avaliar no Google" />
+        <span>Aponte a câmera</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contato">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-logo"><img src="logo.png" alt="Lavblue Itaipuaçu" /></div>
+      <p>Lavanderia self-service em Itaipuaçu, Maricá – RJ. Praticidade, economia e roupas impecáveis na sua rotina.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/lavblueitaipuacu/" target="_blank" rel="noopener" aria-label="Instagram Lavblue Itaipuaçu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/people/Lavblue-Itaipua%C3%A7u/61566690337600/" target="_blank" rel="noopener" aria-label="Facebook Lavblue Itaipuaçu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://wa.me/?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Lavblue%20Itaipua%C3%A7u." target="_blank" rel="noopener" aria-label="WhatsApp Lavblue Itaipuaçu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.7 1.1 2.9c.2.2 2 3 4.8 4.2 1.7.7 2.3.8 3.2.6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.5-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.2.8.9-3.1-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.5 3.7-8.3 8.3-8.3 2.2 0 4.3.9 5.9 2.4 1.6 1.6 2.4 3.6 2.4 5.9.1 4.6-3.6 8.6-8.2 8.6z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h5>Unidades</h5>
+      <ul>
+        <li><a href="#unidades">Praça da 70</a></li>
+        <li><a href="#unidades">Prof. Cardoso de Menezes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#pagamento">Pagamento</a></li>
+        <li><a href="#dicas">Dicas</a></li>
+        <li><a href="#avalie">Avalie no Google</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <ul>
+        <li>Itaipuaçu, Maricá – RJ</li>
+        <li>Aberto 24h, todos os dias</li>
+        <li><a href="https://www.instagram.com/lavblueitaipuacu/" target="_blank" rel="noopener">@lavblueitaipuacu</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    © <span id="year"></span> Lavblue® Itaipuaçu. Todos os direitos reservados. Lavanderia Self-Service 24h.
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Lavblue%20Itaipua%C3%A7u." class="whatsapp-float" aria-label="Fale conosco no WhatsApp" target="_blank" rel="noopener">
+  <span class="pulse"></span>
+  <span class="icon">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.7 1.1 2.9c.2.2 2 3 4.8 4.2 1.7.7 2.3.8 3.2.6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.5-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  </span>
+  <span class="label">Fale conosco</span>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Coordenadas das unidades (sem necessidade de API key)
+  const UNITS = {
+    1: {
+      name: 'Lavblue Praça da 70',
+      embed: 'https://www.google.com/maps?q=-22.969992,-42.9393024&hl=pt-BR&z=18&output=embed'
+    },
+    2: {
+      name: 'Lavblue Prof. Cardoso de Menezes',
+      embed: 'https://www.google.com/maps?q=Lavblue+Rua+Professor+Cardoso+de+Menezes+Itaipua%C3%A7u+Marica&hl=pt-BR&z=17&output=embed'
+    }
+  };
+
+  const buttons = document.querySelectorAll('.btn-locate');
+  const closeButtons = document.querySelectorAll('.map-close');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const unitId = btn.dataset.unit;
+      const targetId = btn.dataset.target;
+      const wrapper = document.getElementById(targetId);
+      const isOpen = wrapper.classList.contains('open');
+
+      document.querySelectorAll('.map-wrapper').forEach(w => w.classList.remove('open'));
+      document.querySelectorAll('.unit-card').forEach(c => c.classList.remove('active'));
+
+      if(!isOpen){
+        const frame = wrapper.querySelector('.map-frame');
+        if(!frame.querySelector('iframe')){
+          const iframe = document.createElement('iframe');
+          iframe.src = UNITS[unitId].embed;
+          iframe.loading = 'lazy';
+          iframe.referrerPolicy = 'no-referrer-when-downgrade';
+          iframe.allowFullscreen = true;
+          iframe.title = 'Mapa ' + UNITS[unitId].name;
+          frame.appendChild(iframe);
+        }
+        wrapper.classList.add('open');
+        btn.closest('.unit-card').classList.add('active');
+        setTimeout(() => {
+          wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 200);
+      }
+    });
+  });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const wrapper = document.getElementById(btn.dataset.close);
+      wrapper.classList.remove('open');
+      const block = wrapper.closest('.unit-block');
+      if(block) block.querySelector('.unit-card').classList.remove('active');
+    });
+  });
+
+  // Menu mobile
+  const menuBtn = document.getElementById('menuBtn');
+  const navMenu = document.getElementById('navMenu');
+  if(menuBtn && navMenu){
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+  }
+
+  // Dicas: placeholder até cadastrar links reais (vídeos / artigos)
+  document.querySelectorAll('.tip-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tip = card.dataset.tip;
+      alert('Em breve: conteúdo da dica "' + tip + '". Conecte aqui o link do vídeo (YouTube, Reels, TikTok) ou artigo.');
+    });
+  });
+</script>
+
+</body>
+</html>
